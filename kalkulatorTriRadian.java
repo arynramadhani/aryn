@@ -7,27 +7,22 @@
  */
 public class kalkulatorTriRadian extends kalkulatorTrigonometri
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
     /**
      * Constructor for objects of class kalkulatorTriRadian
      */
     public kalkulatorTriRadian()
     {
-        // initialise instance variables
-        x = 0;
+        
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * konversi
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @param  double
+     * @return void
      */
-    public int sampleMethod(int y)
+    public void konversi(double sudut)
     {
-        // put your code here
-        return x + y;
+        super.sudut = sudut;
     }
 }

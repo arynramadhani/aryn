@@ -7,27 +7,58 @@
  */
 public class SimpanOperasiKeMemoryReverse implements simpanOperasiKalkulator
 {
-    // instance variables - replace the example below with your own
-    private int x;
+ private String[] dataMemori = new String[100];
+    private int pointer = 0;
+    private String tampilMemori;
 
     /**
      * Constructor for objects of class SimpanOperasiKeMemoryReverse
      */
     public SimpanOperasiKeMemoryReverse()
     {
-        // initialise instance variables
-        x = 0;
+        
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * simpanOperasi
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @param  String data
+     * @return void
      */
-    public int sampleMethod(int y)
+    public void simpanOperasi(String data)
     {
-        // put your code here
-        return x + y;
+        this.dataMemori[pointer] = data;
+        this.pointer = this.pointer + 1;
+        if (this.pointer > 19) this.pointer = 0;
+        //this.pointer = this.pointer > 19 ? 0 : this.pointer; 
+       
+    }
+    
+    /**
+     * bacaOperasi
+     *
+     * @param  void
+     * @return StringArray
+     */
+    public String bacaOperasi()
+    {
+        dataMemoriKeTampil();
+        return this.tampilMemori;
+       
+    }
+    
+     /**
+     * dataMemoriKeTampil
+     *
+     * @param  void
+     * @return void
+     */
+   public void dataMemoriKeTampil()
+    {
+        this.tampilMemori = "";
+        for(int i=0; i<this.pointer; i++)
+        {
+            this.tampilMemori = this.tampilMemori + " " + this.dataMemori[i] + "\n" ;
+        }
     }
 }

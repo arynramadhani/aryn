@@ -7,7 +7,7 @@
  */
 public class kalkulatorprogrammer extends kalkulator
 {
-    // instance variables - replace the example below with your own
+     // instance variables - replace the example below with your own
     private int x;
 
     /**
@@ -29,5 +29,27 @@ public class kalkulatorprogrammer extends kalkulator
     {
         // put your code here
         return x + y;
+    }
+    
+    /**
+     * konversiBilanganDesimaltoHex
+     *
+     * @param  double op1
+     *         double op2
+     * @return double hasil penjumlahan op1 + op2
+     */
+    public String konversiBilanganDesimaltoHex(int op1) 
+    {
+        // DesimaltoHEX
+        String hasilKonversi = Integer.toHexString(op1) ;
+        return hasilKonversi;
+    }
+    
+    // method konversiBilanganDesimaltoBiner
+    public String konversiBilanganDesimaltoBinner(int op1) 
+    {
+        String hasilKonversi = Integer.toBinaryString(op1) ;
+        return hasilKonversi;
+    
     }
 }
